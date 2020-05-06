@@ -6,10 +6,14 @@ class Cube{
 
 		this.wireframe = new THREE.LineSegments( new THREE.EdgesGeometry( geometry ),
 												 new THREE.LineBasicMaterial( { color: 0x000000,
-												 								linewidth: 2 } ) );
+												 								linewidth: 100,
+												 								linejoin: "bevel" } ) );
+		// this.wireframe.material.opacity = 0;
 		this.setPos(pos);
 
 	};
+
+	// EdgesGeometry
 
 	getPos(){
 		var pos = {x:0, y:0, z:0};

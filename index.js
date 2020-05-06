@@ -1,7 +1,7 @@
 
-// var THREE = require('three')
+// var THREE = require('three');
 // import * from 'src/three/controls/TrackballControls.js'
-//import Cube from 'src/cube'
+// import Cube from 'src/cube';
 
 
 function  dist(a,b){
@@ -104,12 +104,12 @@ var material = new THREE.MeshLambertMaterial( { color: 0xffffff} );
 // var material = new THREE.MeshDepthMaterial( { fog: true, skinning: true} );
 
 var material=[
-	new THREE.MeshLambertMaterial({color: "#ffffff"}),
-	new THREE.MeshLambertMaterial({color: "#ff0000"}),
-	new THREE.MeshLambertMaterial({color: "#00ff00"}),
-	new THREE.MeshLambertMaterial({color: "#0000ff"}),
-	new THREE.MeshLambertMaterial({color: "#ffff00"}),
-	new THREE.MeshLambertMaterial({color: "#ee7800"}),
+	new THREE.MeshToonMaterial({color: "#ffffff"}),
+	new THREE.MeshToonMaterial({color: "#ff0000"}),
+	new THREE.MeshToonMaterial({color: "#00ff00"}),
+	new THREE.MeshToonMaterial({color: "#0000ff"}),
+	new THREE.MeshToonMaterial({color: "#ffff00"}),
+	new THREE.MeshToonMaterial({color: "#ee7800"}),
 ];
 
 var rubik=[];
@@ -158,6 +158,11 @@ for(let i =0;i<3;i++){
 
 // var controls = new THREE.TrackballControls( camera, renderer.domElement );
 var controls = new THREE.OrbitControls( camera, renderer.domElement );
+controls.enableZoom = false;
+controls.maxAzimuthAngle = Math.PI/4;
+controls.minAzimuthAngle = -Math.PI/10;
+controls.maxPolarAngle = Math.PI/2;
+controls.minPolarAngle = Math.PI/4;
 
 
 camera.position.x = 5;

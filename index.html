@@ -4,36 +4,49 @@
 		<style>
 			body { margin: 0; }
 			canvas { display: block; }
+
+			.btn {
+				background-color: #f50;
+				width: 5%;
+				height: auto;
+				border: 1px solid #ff3300;
+			}
 		</style>
 	</head>
 	<body>
+		<!-- <div style="display: block;background-color:#f00;width: 100vw;height: 500px; "></div> -->
+		<div style="border: 1px solid #123589">
 
-		<div id="canvas" style="width:80%; height: 80%; overflow: hidden;border-radius: 4px">
+			<div id="canvas" style="width:100%; height: 80%; overflow: hidden;border-radius: 4px">
+
+			</div>
+			<div>
+				<button class="btn" onclick="load_action('f','cw')">F</button>
+				<button class="btn" onclick="load_action('f','acw')">F'</button>
+				<button class="btn" onclick="load_action('b','cw')">B</button>
+				<button class="btn" onclick="load_action('b','acw')">B'</button>
+				<button class="btn" onclick="load_action('r','cw')">R</button>
+				<button class="btn" onclick="load_action('r','acw')">R'</button>
+				<button class="btn" onclick="load_action('l','cw')">L</button>
+				<button class="btn" onclick="load_action('l','acw')">L'</button>
+				<button class="btn" onclick="load_action('u','cw')">U</button>
+				<button class="btn" onclick="load_action('u','acw')">U'</button>
+				<button class="btn" onclick="load_action('d','cw')">D</button>
+				<button class="btn" onclick="load_action('d','acw')">D'</button>
+
+				<!-- <button onclick="count_rubik()">Count</button> -->
+				
+			</div>
+
+			<script src="src/three/three.min.js"></script>
+			<script src="src/three/controls/TrackballControls.js"></script>
+			<script src="src/three/controls/OrbitControls.js"></script>
+			<script src="src/three/controls/DragControls.js"></script>
+			<!-- <script src="index.js"></script> -->
+			<script src="src/cube.js"></script> 
+			<script src="index.js"></script>
 
 		</div>
-		<div>
-			<button onclick="load_action('f','cw')">F</button>
-			<button onclick="load_action('f','acw')">F'</button>
-			<button onclick="load_action('b','cw')">B</button>
-			<button onclick="load_action('b','acw')">B'</button>
-			<button onclick="load_action('r','cw')">R</button>
-			<button onclick="load_action('r','acw')">R'</button>
-			<button onclick="load_action('l','cw')">L</button>
-			<button onclick="load_action('l','acw')">L'</button>
-			<button onclick="load_action('u','cw')">U</button>
-			<button onclick="load_action('u','acw')">U'</button>
-			<button onclick="load_action('d','cw')">D</button>
-			<button onclick="load_action('d','acw')">D'</button>
-
-			<!-- <button onclick="count_rubik()">Count</button> -->
-			
-		</div>
-
-		<script src="src/three/three.min.js"></script>
-		<script src="src/three/controls/TrackballControls.js"></script>
-		<script src="src/three/controls/OrbitControls.js"></script>
-		<!-- <script src="index.js"></script> -->
-		<script src="src/cube.js"></script> 
-		<script src="index.js"></script> 
+		<!-- <div style="display: block;background-color:#ff0;width: 100vw;height: 500px; "></div> -->
 	</body>
 </html>
