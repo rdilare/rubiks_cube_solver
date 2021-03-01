@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.9.6",
-    "three": "^0.115.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "babel-loader": "^8.1.0",
